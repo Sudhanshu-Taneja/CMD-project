@@ -1,0 +1,44 @@
+<div class="card maindiv">
+
+    <div class="headdiv">
+        <div class="prescription"><span>Prescriptions</span></div>
+        <div class="addprescription">
+            <button type="button" class="addbutton" data-bs-toggle="modal" data-bs-target="#popup"
+                (click)="addPre()">+</button>
+        </div>
+    </div>
+
+    <div class="medicine">
+        <div class="medicineList card" *ngFor="let medicine Of medicines;trackBy:trackbyMedicine;">
+            <div class="display1"><span>1.</span></div>
+            <div class="medileft">
+                <span>{{medicine.medicineName}}
+
+                </span>
+                <br>
+                <span class="advice">
+                    {{medicine.description}}
+                </span>
+            </div>
+
+            <div class="mediright">
+                <div class="buttondiv">
+
+
+                    <i class="fa fa-edit editbutton" data-bs-toggle="modal" data-bs-target="#popup"
+                        (click)="editPre(medicine.prescriptionId)"></i>
+                    <button class="deletebutton" (click)="deletePrescription(medicine.prescriptionId)">
+                        X
+                    </button>
+
+                </div>
+                <div class="afterFood">{{medicine.take_With_Food?'Before Food':'After Food'}}</div>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+
+
+<!-- <div class="examples-transitline display-flex flex-content-center flex-column" style="height: 100%;"><h4 class="sr-only">An example of a transit line using icons</h4> <div class="display-flex flex-content-between"><i class="fa-solid fa-compass-drafting fa-fw fa-2x" style="color: var(--category-color);"></i> <i class="fa-solid fa-distribute-spacing-vertical fa-fw fa-2x" style="color: var(--category-color);"></i> <i class="fa-light fa-vector-circle fa-fw fa-2x fa-beat-fade" style="color: var(--fa-gravy); --fa-animation-duration:2s;"></i> <i class="fa-light fa-grid-2 fa-fw fa-2x" style="color: var(--fa-gravy);"></i></div> <div class="position-relative display-flex margin-y-3xl margin-x-sm size-xs" style="height: 1em;"><div class="position-absolute z-index-2" style="top: -0.5em; left: 0px; border: 0.5em solid var(--white); height: 2em; width: 2em; border-radius: var(--border-radius-lg); background-color: var(--category-color);">&nbsp;</div> <div class="padding-4xs" style="flex-grow: 2; background: var(--white); border-radius: var(--border-radius-lg);"><div style="border-top: 0.5em solid var(--category-color); height: 1px;">&nbsp;</div></div> <div class="position-absolute z-index-2" style="top: -0.5em; left: 31%; border: 0.5em solid var(--white); height: 2em; width: 2em; border-radius: var(--border-radius-lg); background-color: var(--category-color);">&nbsp;</div> <div class="padding-4xs" style="flex-grow: 2; background: var(--white); border-radius: var(--border-radius-lg);"><div style="border-top: 0.5em dotted var(--category-color); height: 1px;">&nbsp;</div></div> <div class="position-absolute z-index-2" style="top: -0.5em; right: 31%; border: 0.5em solid var(--white); height: 2em; width: 2em; border-radius: var(--border-radius-lg); background-color: var(--category-color);">&nbsp;</div> <div class="padding-4xs" style="flex-grow: 2; background: var(--white); border-radius: var(--border-radius-lg);"><div style="border-top: 0.5em solid var(--white); height: 1px;">&nbsp;</div></div> <div class="position-absolute z-index-2" style="top: -0.5em; right: 0px; border: 0.5em solid var(--white); height: 2em; width: 2em; border-radius: var(--border-radius-lg); background-color: var(--category-color);">&nbsp;</div></div></div> -->

@@ -1,0 +1,123 @@
+
+
+    <div class="sidebar col-sm-2">    
+        <h2 > 
+            <span class="icon1 glyphicon glyphicon-align-right icon-color" ></span>     
+            <a href="viewallappointments"><span class="glyphicon glyphicon-stats icon-color"></span></a>    
+             <a href="patient"><span class="glyphicon glyphicon-user icon-color"></span></a>     
+             <!-- <a href="viewchat"><span class="glyphicon glyphicon-comment icon-color"> ChatRoom</span></a>      -->
+             <a href="settings"><span class="glyphicon glyphicon-cog icon-color"></span></a> 
+            </h2>
+        </div>
+
+        <div class="header">
+            <div class="col-sm-14">
+                <app-top-header></app-top-header>
+                </div>
+                </div>
+
+<div class="whole">
+    <div class="row" > <div class="buttons"><a href="patient"><span><i class="fa fa-arrow-left" aria-hidden="true"></i></span></a></div>
+    <!-- *ngIf="patientInfo.patientid == patid.patientid"> -->
+        <div class ="col-sm-4" >
+            <img class="logo" src={{patientInfo.imageurl}}>
+        </div>
+        <div class="col-sm-4">
+
+            <p class="peter"><b>{{patientInfo.name}}</b></p>
+            <h3 class="tel">Tel:{{patientInfo.phone}}</h3>
+
+            <p class="material-icons blue-color 1"  > chat</p>
+          <p class="material-icons blue-color 1"> phone</p>
+            <p class="material-icons blue-color 3"   > video_call</p>
+      
+
+        </div>
+        <div class="col-sm-4 ">
+            <div class="box">
+                <span class="material-icons blue-color "> alarm_add</span>
+                <p>Book New</p>
+            </div>
+        </div>
+        <div class="row hea">
+            <div class="col-sm-3">
+                <div class="line">
+                    <h4 class="heading"><b>Info</b>
+                       <br> 36  <i class="fa-solid fa-mars"></i> SEP12/1996</h4>
+                    <h3>{{patientInfo.DOB}}</h3>
+                </div>
+                <h3> {{patientInfo.height}} cm<span class="material-icons red-color "> bloodtype </span>{{patientInfo.bloodgroup}}</h3>
+
+
+            </div>
+            <div class="col-sm-3">
+                <div class="line">
+                    <h4 class="heading"><b> Allergies</b>  </h4>
+                    <h3>{{patientInfo.allergies}}</h3>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="line">
+                    <h4 class="heading"><b>Active Issues</b> </h4>
+                    <h3>{{patientInfo.activeissues}}</h3>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <h4 class="heading"><b>Medical Problems</b> </h4>
+                <h3> {{patientInfo.medicalproblems}}</h3>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+ <h1 class="demoText">Appointments/Consultation</h1>
+ 
+ <div class="grid-container">
+    <div class="col-md-4 col-sm-4 col-xs-4 ">
+        <app-symptoms></app-symptoms>
+    </div>
+    <div class="overflow-auto">
+        <app-appointment-history></app-appointment-history>
+    </div>
+    <div  class="overflow-hidden">
+    <app-prescription-history></app-prescription-history>
+</div> 
+</div>
+
+<!-- <div id="demo1">
+    <table>
+        <tr>
+            <td id="demoSymp">
+                <app-symptoms></app-symptoms>
+            </td>
+            <td > -->
+
+                <!-- <nav id="demoApp">
+                    <app-appointment-history></app-appointment-history>
+                </nav> -->
+
+
+                
+            <!-- </td> -->
+            <!-- <td id="demopre">
+                <app-prescription-history></app-prescription-history>
+            </td>
+        </tr>
+    </table>
+</div> -->
+
+
+<!-- <div class="sympt">
+    
+    <app-symptoms></app-symptoms>
+</div>
+
+<div class="appoin">
+    <app-appointment-history></app-appointment-history>
+</div>
+
+<div class="pres">
+    <app-prescription-history></app-prescription-history>
+</div>  -->

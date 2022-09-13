@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="header">
+    <a href="register">
+      <h3 >Sign Up</h3>
+    </a>
+    <!-- <span><b>Sign Up</b></span> -->
+  </div>
+  <div class="leftclass">
+    <i><p style="font-size: 80px; color: black"></p></i>
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+ <!-- this part shows as login for doctor or patient  -->
+    <div class="rightclass"> 
+    <h1 *ngIf="cmd">Welcome to CMD</h1>
+    <h1 *ngIf="cm">Welcome to KKD</h1>
+    <br /><br /><br /><br />
+    <!-- In login page this part will be indicated as type email and password -->
+    <div>
+      <input
+        type="email"
+        placeholder="username"
+        #username
+        name="username"
+        id="username"
+      
+        formControlName="username"
+        required/><br /><br /><br />
+    </div>
+    <input (keydown.enter)="set(username.value,password.value)"
+      type="password"
+      placeholder="Password"
+      #password
+      name="password"
+      id="psw"
+     
+      formControlName="password"
+      required
+    /><br /><br /><br /><br />
+    <!-- <button type="button"   (click)="onSubmit(username,password)" class="btn btn-secondary btn-lg" enabled style="border-radius:5px">Log In</button> -->
+    <!--<p>Complete the form to enable button.</p> -->
+    <button type="submit" [disabled]="!loginForm.valid" (click)="set(username.value, password.value)">log In</button>
+    <br /><br /><br /><br />
+    <!-- using  these method to get login page of patient or doctor -->
+    <a (click)="display()">Login as doctor</a><br /><br />
+    <a (click)="display1()">Login as patient</a><br /><br />
+    <!-- <a routerLink="/doctorlogin" (click)>Login as doctor</a><br><br>
+    <a routerLink="/">Login as patient</a> -->
+  </div>
+  </form>
+</div>

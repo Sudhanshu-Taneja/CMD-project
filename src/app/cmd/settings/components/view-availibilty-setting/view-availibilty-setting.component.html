@@ -1,0 +1,222 @@
+<!-- -------------------------------------------------topheader----------------------------------------- -->
+
+<div class="headPart">
+       <div class="status">
+         <div class="statusDetails" (click)="drop(dropdwon)">
+          
+        <h4><fa-icon [icon]="faBell" class="fa-1x" ></fa-icon>&nbsp;&nbsp;John Doe &nbsp;
+         &nbsp; <fa-icon [icon]="faChevronDown" class="fa-1x" >&nbsp;</fa-icon></h4>
+          &nbsp;<img src= "" alt=" "  srcset="https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg?w=2000" 
+          style= " width:37px; height: 32px; border-radius: 100%;">
+      </div>
+       <div  id="drop" class="{{dropdwon}}">
+                          <ul  onclick="list()" >
+                            <li>
+                              Status:Online
+                              <div class="divd"></div>
+                            </li>
+                              <li>
+                                 AccountSettings
+                                  <div class="divd"></div>
+                              </li>
+                              <li>
+                                  Profile
+                                  <div class="divd"></div>
+                              </li>
+                            <li >
+                              <a  [routerLink]="['/landing']" >Logout</a>
+                            </li>
+  
+                          </ul>
+                  </div>
+    </div>
+    </div>
+
+  <!-- ----------------------------------------sidebar-------------------------------------------------- -->
+
+  <div class="sidebar col-sm-2">
+    <h2>
+      <span class="icon1 glyphicon glyphicon-align-right icon-color" style="color: white;">
+        Connect My Doc</span
+      >
+      <a href="viewallappointments"
+        ><span class="glyphicon glyphicon-stats icon-color"> Dashboard</span></a
+      >
+      <a href="patient"
+        ><span class="glyphicon glyphicon-user icon-color"> Patient</span></a
+      >
+      <!-- <a href="viewchat"><span class="glyphicon glyphicon-comment icon-color"> ChatRoom</span></a>      -->
+      <a href="settings"
+        ><span class="glyphicon glyphicon-cog icon-color"> Settings</span></a
+      >
+    </h2>
+  </div>
+
+  <!-- // Availability -->
+  <article id="body">
+    <p >Working Days</p><br>
+    <div class="dropdown">
+    <button class="dropbtn">5 days <i class="arrow down"></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    
+    
+    <label class="inpt" id="inp1">Start Time <b>12.00 AM</b></label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <label class="inpt" id="inp2">End Time <b> 12.00 PM</b></label>
+    </div>
+    <!---<div class="Days"><a> <p style="text-align: center;" Start Time 12.00 AM End Time 12.00 PM style="color: rgb(46, 46, 156);" ><u><font color=blue size=3>Start Time <b>12.00 AM</b> </font> <u><font size=3 color="blue">End Time <b>12.00 PM</b></font></u></p></a></div> -->
+    
+    
+    
+    <br><hr/>
+    <p ><i class="text"> Drag a slot to add to your daily timeline </i></p>&emsp;&emsp;&ensp;&nbsp;
+    <button type="button" id="btn1" class="btn btn-outline-primary" >15Min</button>&ensp;
+    <button type="button" id="btn2"class="btn btn-outline-secondary">30Min</button>&ensp;
+    <button type="button" id="btn3" class="btn btn-outline-success">1Hr</button>&ensp;
+    <button type="button" id="btn4"class="btn btn-outline-info">1.5Hr</button>&ensp;
+    <button type="button" id="btn5" class="btn btn-outline-warning">2Hr</button>&ensp;
+    <button type="button" id="btn6" class="btn btn-outline-danger">Break</button>
+    
+    <table class="table1"
+    cellspacing="0" cellpadding="0">
+    <caption >
+    
+    </caption>
+    
+    <tbody>
+    <tr>
+    <td class="row1">12:00 AM</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+     </tr>
+    <tr>
+    <td class="row1">2:00 AM</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td class="row1">4:00 AM</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td class="row1">6:00 AM</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td class="row1">8:00 AM</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td class="row1">10:00 AM</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td class="row1">12:00 AM</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td class="row1">2:00 PM</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td class="row1">4:00 PM</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td class="row1">6:00 PM</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td class="row1">8:00 PM</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td class="row1">10:00 PM</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    </tbody>
+    </table>
+    </article>
+    

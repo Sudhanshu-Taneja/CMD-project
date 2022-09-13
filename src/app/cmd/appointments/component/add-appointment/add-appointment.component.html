@@ -1,0 +1,118 @@
+<!-- -------------------------------------------------topheader----------------------------------------- -->
+
+<div class="header" >
+    <div class="col-sm-14">
+        <app-top-header></app-top-header>
+    </div>
+  </div>
+
+  <!-- ----------------------------------------sidebar-------------------------------------------------- -->
+
+  <div class="sidebar col-sm-2">
+    <h2>
+      <span class="icon1 glyphicon glyphicon-align-right icon-color" style="color: white;">
+        Connect My Doc</span
+      >
+      <a href="viewallappointments"
+        ><span class="glyphicon glyphicon-stats icon-color"> Dashboard</span></a
+      >
+      <a href="patient"
+        ><span class="glyphicon glyphicon-user icon-color"> Patient</span></a
+      >
+      <!-- <a href="viewchat"><span class="glyphicon glyphicon-comment icon-color"> ChatRoom</span></a>      -->
+      <a href="settings"
+        ><span class="glyphicon glyphicon-cog icon-color"> Settings</span></a
+      >
+    </h2>
+  </div>
+  <!-- //main page  -->
+  
+<!-- Main Page-->
+<div class="main">
+    <h3>
+      <p class="text-center"><strong>Appointment Confirmation</strong></p>
+    </h3>
+    <hr />
+    <div>
+      <div class="con1">
+        <h3 class="hedder1">Patient</h3>
+        <img class="snap1" src="{{ path1 }}" alt="{{ alttext1 }}" />
+        <span class="name">{{ confirmationData.patientName }}</span>
+        <br />
+        <!-- <span class="name1">{{name1}}</span> -->
+      </div>
+      <div class="b0"></div>
+      <div class="b1 t1">
+        <p class="boxtext1">{{ type }}</p>
+      </div>
+      <div class="b1 t2">
+        <p class="boxtext1">{{ confirmationData.reason }}</p>
+      </div>
+      <div class="b1 t3">
+        
+          <p class="boxtext1">{{ PreviousPrescription }}</p>
+        
+      </div>
+      <div class="b2 t1">
+        <P class="boxtext"><small>Type</small></P>
+      </div>
+      <div class="b2 t2">
+        <P class="boxtext"><small>Reason</small></P>
+      </div>
+      <div class="b2 t3 t4">
+        <P class="boxtext"><small>Previous Prescription</small></P>
+      </div>
+    </div>
+    <div class="verticalline"></div>
+  
+    <div>
+      <div class="con2">
+        <h3 class="hedder1 he2">Doctor</h3>
+        <div class="con3">
+          <img class="snap2" src="{{ path }}" alt="{{ alttext }}" />
+          <p class="name1">
+            <strong>{{ nameofthedr }}</strong> <br />{{ specialist }}
+          </p>
+        </div>
+        <br />
+      </div>
+      <div class="b0 t0"></div>
+      <div class="b1 t1 a1">
+        <p class="boxtext1">
+          Date: {{ confirmationData.appointmentDate | date: "shortDate" }} | Time:
+          {{ formatTime(confirmationData.appointmentTime) }}
+        </p>
+        <br />
+      </div>
+      <div class="b1 t2 a1">
+        <P class="boxtext1">{{ confirmationData.status }}</P>
+      </div>
+      <div class="b1 t3 a1">
+        <p class="boxtext1">{{ confirmationData.issue }}</p>
+      </div>
+      <div class="b2 t1 a1">
+        <P class="boxtext"><small>Time</small></P>
+      </div>
+      <div class="b2 t2 a1">
+        <P class="boxtext"><small>Status</small></P>
+      </div>
+      <div class="b2 t3 a1">
+        <P class="boxtext"><small>Issues</small></P>
+      </div>
+    </div>
+    <!-- <img class="snap3" src="{{path2}}" alt="{{alttext2}}"> -->
+    <button class="button" routerLink="/viewallappointment">
+      Go Back to Application
+    </button>
+  </div>
+  <button [routerLink]="['/CMD/appointment/conformAppointment']">
+    conform
+    </button>
+    <br>
+    <button [routerLink]="['/CMD/appointment/scheduleAppointment']">
+    schedule
+    </button>
+    <br>
+    <button [routerLink]="['/CMD/appointment/addAppointment']">
+    add
+    </button>

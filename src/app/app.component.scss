@@ -1,0 +1,54 @@
+#addsymptom {
+    width: 350px;
+    height: 400px;
+    border-width: 2px;
+    border-radius: 25px;
+    background-color: white;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vmin;
+    width: 100%;
+    background-color: lightgrey;
+    
+}
+.h1 {
+    text-align: center;
+    color:#046666 ;
+    background-color: white;
+    font-size: 25px;
+}
+.symptom {
+    padding-top: 30px;
+    padding-left: 40px;
+    background-color: white;
+    color: #046666;
+}
+.example {
+    color: rgb(207, 206, 206);
+    font-size: small;
+    background-color: white;
+}
+.symptom input {
+    outline: none;
+    width: 80%;
+    border: 0;
+    border-bottom: 1.5px solid #046666;
+    background-color: white;
+    color: #046666;
+    padding-bottom: 2px;
+}
+.button {
+    color: white;
+    background-color: #046666; 
+    border: none;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width:100%
+}
+.middle {
+    padding-bottom: 75px;
+    background-color: white;
+}
