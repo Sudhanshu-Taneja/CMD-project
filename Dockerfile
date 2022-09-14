@@ -23,5 +23,8 @@ FROM nginx:latest
 # Copy the build output to replace the default nginx contents.
 COPY --from=build /app/dist/cmd_fe /usr/share/nginx/html
 
-# Expose port 80
+RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx/nginx.conf /etc/nginx/conf.d
+#fire for nginx
 EXPOSE 80
+CMD [ "nginx","-g","daemon off;" ]
